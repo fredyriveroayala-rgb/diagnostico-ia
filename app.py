@@ -103,7 +103,7 @@ No inventes el contenido de la imagen. Si la evidencia es insuficiente, indica e
             client = genai.Client(api_key=api_key)
             with st.spinner("La IA está leyendo la imagen y preparando el diagnóstico..."):
                 response = client.models.generate_content(
-                    model="gemini-2.5-flash",
+                    model="gemini-3.8-flash",
                     contents=[
                         types.Part.from_bytes(data=image_bytes, mime_type="image/jpeg"),
                         prompt
